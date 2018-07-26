@@ -1,4 +1,4 @@
-# simple_message_box [![Build Status](https://travis-ci.com/rukai/simple-message-box.svg?branch=master)](https://travis-ci.com/rukai/simple-message-box)
+# simple_message_box [![Build Status](https://travis-ci.com/rukai/simple-message-box.svg?branch=master)](https://travis-ci.com/rukai/simple-message-box) [![Crates.io](https://img.shields.io/crates/v/simple-message-box.svg)](https://crates.io/crates/simple-message-box)
 
 Create a native message box for any platform:
 ```
