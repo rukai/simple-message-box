@@ -1,9 +1,12 @@
 [package]
 name = "simple-message-box"
 version = "0.0.1"
+authors = ["Rukai <rubickent@gmail.com>"]
 license = "MIT"
 repository = "https://github.com/rukai/simple-message-box"
-description = "Simple message box"
+description = "Create a simple message box"
+keywords = ["window", "simple", "message", "box"]
+categories = ["gui"]
 
 [target.'cfg(target_os = "linux")'.dependencies]
 x11-dl = { version = "2" }
