@@ -8,6 +8,8 @@ cache: cargo
 script:
   - cargo test
   - cargo test --release
+  - cargo build --examples --all
+  - cargo build --examples --all --release
 
 branches:
   only:

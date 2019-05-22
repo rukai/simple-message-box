@@ -35,7 +35,7 @@ pub(crate) fn create_message_box_impl(message: &str, title: &str) {
     let window = unsafe {
         let screen = (xlib.XDefaultScreen)(display);
         let root = (xlib.XRootWindow)(display, screen);
-        let mut attributes: xlib::XSetWindowAttributes = mem::uninitialized();
+        let mut attributes: xlib::XSetWindowAttributes = mem::zeroed();
         attributes.background_pixel = (xlib.XWhitePixel)(display, screen);
 
         // window height gets reset later
@@ -98,7 +98,7 @@ pub(crate) fn create_message_box_impl(message: &str, title: &str) {
 
     // create graphics context
     let gc = unsafe {
-        let mut values: xlib::XGCValues = mem::uninitialized();
+        let mut values: xlib::XGCValues = mem::zeroed();
         (xlib.XCreateGC)(display, window, 0, &mut values)
     };
 
@@ -137,7 +137,7 @@ pub(crate) fn create_message_box_impl(message: &str, title: &str) {
     loop {
         // wait for next event
         let event = unsafe {
-            let mut event: xlib::XEvent = mem::uninitialized();
+            let mut event: xlib::XEvent = mem::zeroed();
             (xlib.XNextEvent)(display, &mut event);
             event
         };
